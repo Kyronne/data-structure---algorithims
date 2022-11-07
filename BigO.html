@@ -9,5 +9,66 @@ Space complexity is another way of utilising BigO, which is solving a problem in
     Average case is represented by Theta
 </p>
 
+<p> O(n) represents the function running the number of times passed through N. 10 means N runs 10 times.</p>
+
+<p> This represents the function running once:     
+    for (let i = 0; i < n; i++) {
+        console.log(i)
+    } } 
+</p>
+
+<p>In this code: function logItems(n) {
+    for (let i = 0; i < n; i++) {
+        console.log(i)
+    } 
+    
+    for (let j=0; j < n; j++) {
+        console.log(j)
+    }
+}
+
+logItems(3)
+
+O(n) although code was passed through twice above the constant is dropped, i.e putting the number 2 before n to reperent it passing through twice.
+</p>
+
+<p> Represented by 0(N2) Squared(n * n):
+    function logItems(n) {
+        for (let i = 0; i < n; i++) {  
+            for (let j = 0; j < n; j++) {
+                console.log(i, j) }
+        }
+    } 
+</p>
+
+<p>Represented by O(N2) Squared as it's simplified:
+    function logItems(n) {
+        for (let i = 0; i < n; i++) {  
+            for (let j = 0; j < n; j++) { 
+                for (let k = 0; k < n; k++) {
+                console.log(i, j, k) 
+                } 
+            }
+        }
+    } 
+</p>
+
+<p>O of N compeletes the code quicker, as opposed to O N squared</p>
+
+<p>This code:
+
+    function logItems(n) {
+        for (let i = 0; i < n; i++) {  
+            for (let j = 0; j < n; j++) { 
+                console.log(i, j) 
+                } 
+            }
+        for(let k = 0; k < n; k++) {
+            console.log(k)
+        }
+    } 
+   
+You would assume would be 0(n2 + n) however non domonants are removed in Big 0 notation. 
+</p>
 </div>
 
