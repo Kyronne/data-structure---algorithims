@@ -1,0 +1,61 @@
+<div>
+   <h1>Linked Lists</h1>
+   <h2>Overview</h2>
+   <p>
+    Linked Lists are often compared to Arrays, linked lists don't have indexs and can be stored in mutiple places in memory instead of a single place like an array.
+
+    Each item in the list starts with a head, or what we would think of index 0 and a tail which is the last item which points to null.
+   </p> 
+   <h2>Big 0 of Linked Lists</h2>
+   <p>
+    Pushing something to the end of a linked list is 0(1).
+    Removing something from a linkedlist after the head, as you have to iterate from the head, this is 0(n).
+    Pushing something to the start is 0(1)
+    Removing from the begining is 0(1)
+    Inserting anything in the array involves itterating so that is 0(n)
+    Removing from the array at any point that isn't the start of end is also 0(n)
+    Finding something within the list involves 0(n), with the use of value or index - this makes it different from an array.
+   </p>
+   <h2>Under The Hood</h2>
+   <p>
+    What is a node that we can point a linked list to, it's an object, it is a value and a pointer.
+    
+    4 node
+
+    {
+        value: 4,
+        next: null
+    }
+
+    how do we point another node to this?
+
+    {
+        value: 7,
+        next: {
+            value: 4,
+            next: null
+        }
+    }
+
+    Have the next value equal that node, as it's next value is null this is the end of the linked list.
+
+    So what does a full linked list look like:
+
+    { head: {
+        value: 11,
+        next: {
+            value: 3,
+            next: {
+                value: 23, 
+                next: {
+                    value: 7, 
+                    next: {
+                        value: 4,
+                        next: null   /* this is the tail */
+                    }
+                }
+            }
+        }
+    } }
+   </p>
+</div>

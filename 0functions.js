@@ -1,13 +1,16 @@
-function logItems(n) {
-    for (let i = 0; i < n; i++) {  
-        for (let j = 0; j < n; j++) { 
-            console.log(i, j) 
-            } 
-        }
-    for(let k = 0; k < n; k++) {
-        console.log(k)
+class Cookie {
+    constructor(color) {
+        this.color = color
     }
-} 
-   
+    getColor() {
+        return this.color
+    }
+    setColor(color) {
+        this.color = color
+    }
+}
 
-logItems(10)
+let cookieOne = new Cookie('green')
+
+console.log(cookieOne.setColor('yellow'))
+console.log(cookieOne.getColor())

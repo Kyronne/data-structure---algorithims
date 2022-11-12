@@ -32,7 +32,7 @@ logItems(3)
 O(n) although code was passed through twice above the constant is dropped, i.e putting the number 2 before n to reperent it passing through twice.
 </p>
 
-<p> Represented by 0(N2) Squared(n * n):
+<p> Represented by 0(N^2) Squared(n * n):
     function logItems(n) {
         for (let i = 0; i < n; i++) {  
             for (let j = 0; j < n; j++) {
@@ -70,5 +70,72 @@ O(n) although code was passed through twice above the constant is dropped, i.e p
    
 You would assume would be 0(n2 + n) however non domonants are removed in Big 0 notation. 
 </p>
+<p> This code represents 0(1): 
+
+    function addItems(n) {
+        return n + n + n
+    }
+
+ No matter how many n + are added it is still 0(1), i.e constant time.
+ This is because it's run time is efficent, no nesting just a simple addition sum that can be done in one process hence 0(1)
+
+</p>
+<p>
+    How many times do you need to divide a number in half to find 1 number 0(log n) represents
+ 1,073,741, 824 has to be diveded 31 times to find any item in the array it's extremly efficent
+  
+ To find a number in the array
+ [1,2,3,4,5,6,7,8]
+
+ You will half this array 3 times
+    1st time:
+ [1,2,3,4]
+    2nd time:
+ [1,2]
+    3rd time:
+ [1]
+
+ Much more effienct than itterating through an array.
+    Most efficent sorting algorithim.
+</p>
+<p> 
+    Different Terms for Inputs
+
+    function logItems(a, b) {
+        for (let i = 0; i < a; i++) {
+            console.log(i)
+        } 
+        
+        for (let j=0; j < b; j++) {
+            console.log(j)
+        }
+    }
+
+    0(a + b) as there are 2 different inputs, 2 different (N)'s.
+
+    function logItems(a, b) {
+        for (let i = 0; i < a; i++) {  
+            for (let j = 0; j < b; j++) {
+                console.log(i, j) }
+        }
+    } 
+    
+    0(a * b) as there are 2 different inputs, 2 different (N)'s.
+
+
+
+</p>
+<p>
+    Big 0: Arrays
+
+    .push and .pop are 1 operation and add to the end of the array so 0(1)
+    .unshift  and .shift involve reindexing so are 0(n) as each item in the array needs to be reindexed
+    as the items are pushed to start, so the operation is 0(n), with each item in the array representing n.
+    .splice is 0(n) as worst case is anaylsed, splice may reindex as at any point in the array
+    .search is 0(1) if searching by index
+    .search is 0(n) if you are searching by number as that goes through every number in the array
+
+</p>
+<p></p>
 </div>
 
